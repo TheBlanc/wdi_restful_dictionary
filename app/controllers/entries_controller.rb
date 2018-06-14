@@ -14,4 +14,12 @@ class EntriesController < ApplicationController
     redirect_to entries_url
   end
 
+  def edit
+    @entry = Entry.find(params[:id])
+  end
+
+  def update
+    redirect_to entry_url(params[:id])
+  end
+
 end
