@@ -1,1 +1,6 @@
-<p>This is the entries index page</p>
+<h1>DICTIONARY</h1>
+<%= link_to "NEW WORD", new_entry_url %>
+<% @entries.each do |entry| %>
+  <h2><%= link_to entry.word.capitalize, entry_url(entry) %></h2>
+  <hr>
+<% end %>

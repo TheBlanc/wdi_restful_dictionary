@@ -1,1 +1,5 @@
-<h1>This is entry nunber <%= params[:id] %>: "<%= @entry.word.capitalize %>" </h1>
+<%= link_to "All Definitions", entries_url %>
+<h1><%= @entry.word.capitalize %></h1>
+<p><strong>Language:</strong> <%= @entry.language.upcase %></p>
+<p><%= @entry.definition.capitalize %></p>
+<%= link_to "Edit", edit_entry_url %>
